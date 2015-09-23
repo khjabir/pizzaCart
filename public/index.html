@@ -1,0 +1,31 @@
+<html ng-app="pizzaApp">
+  <meta charset="utf-8">
+  <title>Xperion Pizza</title>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  </head>
+  <body>
+  <div>
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a>Home</a></li>
+            <li><a href="">View Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div ng-view></div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="admin/admin.js"></script>
+  <script type="text/javascript" src="user/user.js"></script>
+  </body>
+</html>
