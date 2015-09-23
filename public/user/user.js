@@ -3,8 +3,11 @@ angular.module('userApp',['ngRoute']);
 function config ($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl : 'PizzaList/pizzaList.html',
+		templateUrl : 'user/PizzaList/pizzaList.html',
 		controller : 'pizzaListCtrl'
+	})
+	.otherwise({
+		redirectTo : '/'
 	});
 }
 

@@ -1,6 +1,13 @@
 <body ng-app = "adminApp">
-<h1>Admin</h1>
-<ul ng-controller = "AdminCtrl as adminCtrl">
-  <li>{{adminCtrl.msg}}</li>
-</ul>
-</body>
+<div class="container"  ng-controller = "AdminCtrl as admin">
+<h1> Admin Login </h1>
+  <form role="form">
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model = "admin.user.name" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" ng-model = "admin.user.password" placeholder="Password">
+    </div>
+    <a ng-click="admin.validate()" class="btn btn-default">Login</a>
+  </form>
+</div>

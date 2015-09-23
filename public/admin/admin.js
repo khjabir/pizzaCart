@@ -2,14 +2,18 @@ angular.module('adminApp', ['ngRoute']);
 
 function config ($routeProvider) {
 	$routeProvider
-	.when('/',{
-		templateUrl : '/login/login.html',
+	.when('/admin',{
+		templateUrl : 'admin/login/login.html',
 		controller : 'AdminCtrl'
 	});
 }
 
 function AdminCtrl() {
-	this.msg = "Admin OK";
+	this.user = {};
+	this.validate = function() {
+		console.log(this.user);
+
+	}
 }
 
 angular.module('adminApp')
