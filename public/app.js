@@ -1,1 +1,1 @@
-angular.module('pizzaApp',['adminApp', 'userApp']);
+angular.module('pizzaApp',['admin', 'user']);

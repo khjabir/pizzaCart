@@ -1,0 +1,19 @@
+<div>
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a>Home</a></li>
+            <li><a href="">View Cart</a></li>
+          </ul>
+          <ul class="nav navbar-right">
+            <li><a style="decoration : none"><input type="text" class="form-control" placeholder="Search"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+<h1>Pizza List</h1>
+<ul ng-controller = "pizzaListCtrl as pizzaCtrl">
+  <li>{{pizzaCtrl.msg}}</li>
+</ul>

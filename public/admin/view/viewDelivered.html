@@ -1,0 +1,25 @@
+<a href="#/viewOrders">New Orders</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><center>Name</center></th>
+      <th><center>Address</center></th>
+      <th><center>Mob</center></th>
+      <th><center>Order</center></th>
+      <th><center>Delivery Status</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="order in delivered.orders">
+      <td><center>{{order.name}}</center></td>
+      <td><center>{{order.address}}</center></td>
+      <td><center>{{order.mob}}</center></td>
+      <td>
+		<ul ng-repeat = "item in order.order">
+      		{{item.name}} - {{item.qty}}
+      	</ul>
+ 	  </td>
+    <td><center>{{order.deliveryStatus}}</a></center></td>
+    </tr>
+  </tbody>
+</table>

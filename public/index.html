@@ -8,27 +8,18 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   </head>
   <body>
-  <div>
-  	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a>Home</a></li>
-            <li><a href="">View Cart</a></li>
-          </ul>
-          <ul class="nav navbar-right">
-            <li><a style="decoration : none"><input type="text" class="form-control" placeholder="Search"></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
   <div ng-view></div>
   </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
-  <script type="text/javascript" src="admin/admin.js"></script>
   <script type="text/javascript" src="user/user.js"></script>
+  <script type="text/javascript" src="user/pizzaList/pizzaListCtrl.js"></script>
+  <script type="text/javascript" src="admin/admin.js"></script>
+  <script type="text/javascript" src="admin/login/adminCtrl.js"></script>
+  <script type="text/javascript" src="admin/view/SessionCtrl.js"></script>
+  <script type="text/javascript" src="admin/view/SessionService.js"></script>
+  <script type="text/javascript" src="admin/view/httpService.js"></script>
+  <script type="text/javascript" src="admin/view/deliveredCtrl.js"></script>
   </body>
 </html>

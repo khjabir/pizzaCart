@@ -1,9 +1,9 @@
-angular.module('userApp',['ngRoute']);
+angular.module('user',['ngRoute']);
 
 function config ($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl : 'user/PizzaList/pizzaList.html',
+		templateUrl : 'user/pizzaList/pizzaList.html',
 		controller : 'pizzaListCtrl'
 	})
 	.otherwise({
@@ -11,10 +11,6 @@ function config ($routeProvider) {
 	});
 }
 
-function pizzaListCtrl() {
-	this.msg = "User page control works";
-}
-
-angular.module('userApp')
-	.controller('pizzaListCtrl',pizzaListCtrl)
+angular
+	.module('user')
 	.config(config);
