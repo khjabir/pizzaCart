@@ -4,7 +4,8 @@ function config ($routeProvider) {
 	$routeProvider
 	.when('/', {
 		templateUrl : 'user/pizzaList/pizzaList.html',
-		controller : 'pizzaListCtrl'
+		controller : 'pizzaListCtrl',
+		controllerAs : 'pizzaCtrl'
 	})
 	.otherwise({
 		redirectTo : '/'

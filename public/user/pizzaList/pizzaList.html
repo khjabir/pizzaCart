@@ -6,14 +6,29 @@
             <li class="active"><a>Home</a></li>
             <li><a href="">View Cart</a></li>
           </ul>
-          <ul class="nav navbar-right">
-            <li><a style="decoration : none"><input type="text" class="form-control" placeholder="Search"></a></li>
-          </ul>
+          <!-- <ul class="nav navbar-right"> -->
+            <!-- <li><a><input type="text" class="form-control" ng-model = "query" placeholder="Search"></a></li> -->
+          <!-- </ul> -->
         </div>
       </div>
     </nav>
   </div>
-<h1>Pizza List</h1>
-<ul ng-controller = "pizzaListCtrl as pizzaCtrl">
-  <li>{{pizzaCtrl.msg}}</li>
-</ul>
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>Pizza Cart</h2>
+  </div>
+    <input type="text" class="form-control" ng-model = "query" placeholder="Search">
+
+</div>
+
+<div>
+<!-- <center><input type = "text" name="search" ng-model = "query" Placeholder="Search"></center> -->
+</div>
+<div class="img" ng-repeat="pizza in pizzaCtrl.list | filter:query | orderBy:'name'">
+	<a href = "#/pizza/{{pizza.name}}" style="text-decoration:none;">
+		<img ng-src="{{pizza.image}}" width="100">
+	</a>
+	<br>{{pizza.name}}
+</div>
+</body>
