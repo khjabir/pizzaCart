@@ -10,7 +10,7 @@ var users = require('./routes/users');
 var adminCtrl = require('./routes/adminCtrl');
 var deliverCtrl = require('./routes/deliverCtrl');
 var delivered = require('./routes/delivered');
-var pizzaData = require('./routes/pizzaData');
+var pizzadata = require('./routes/pizzadata');
 
 var app = express();
 
@@ -31,7 +31,7 @@ app.use('/users', users);
 app.use('/adminCtrl', adminCtrl);
 app.use('/deliverCtrl', deliverCtrl);
 app.use('/delivered', delivered);
-app.use('/pizzaData',pizzaData);
+app.use('/pizzadata',pizzadata);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,6 +1,6 @@
 <html ng-app="pizzaApp">
   <meta charset="utf-8">
-  <title>Xperion Pizza</title>
+  <title>Pizza Cart</title>
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,18 +8,21 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
   </head>
   <body>
-  <div ng-view></div>
-  </body>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-  <script type="text/javascript" src="user/user.js"></script>
-  <script type="text/javascript" src="user/pizzaList/pizzaListCtrl.js"></script>
-  <script type="text/javascript" src="admin/admin.js"></script>
-  <script type="text/javascript" src="admin/login/adminCtrl.js"></script>
-  <script type="text/javascript" src="admin/view/SessionCtrl.js"></script>
-  <script type="text/javascript" src="admin/view/SessionService.js"></script>
-  <script type="text/javascript" src="admin/view/httpService.js"></script>
-  <script type="text/javascript" src="admin/view/deliveredCtrl.js"></script>
+    <div ng-view></div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="user/user.js"></script>
+    <script type="text/javascript" src="user/pizzaList/pizzaListCtrl.js"></script>
+    <script type="text/javascript" src="user/pizzaDetails/pizzaDetailCtrl.js"></script>
+    <script type="text/javascript" src="user/pizzaDetails/costService.js"></script>
+    <script type="text/javascript" src="user/pizzaDetails/cartService.js"></script>
+    <script type="text/javascript" src="user/viewCart/viewCartCtrl.js"></script>
+    <script type="text/javascript" src="admin/admin.js"></script>
+    <script type="text/javascript" src="admin/login/adminCtrl.js"></script>
+    <script type="text/javascript" src="admin/view/SessionCtrl.js"></script>
+    <script type="text/javascript" src="admin/view/SessionService.js"></script>
+    <script type="text/javascript" src="admin/view/httpService.js"></script>
+    <script type="text/javascript" src="admin/view/deliveredCtrl.js"></script>
   </body>
 </html>

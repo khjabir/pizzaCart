@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+<div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="#/">Home</a></li>
+        <li class="active"><a>Cart</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/userdetails">Place Order</a></li>
+        <li><a>Total Amount:{{cartCtrl.total|currency:"&#8377;"}}/-</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<h1>Order Summary</h1>
+<p ng-repeat="pizza in cartCtrl.pizzaList">
+Name: {{pizza.name}}<br>
+Quantity: {{pizza.qty}} <br>
+Amount: {{pizza.cost}} <br>
+
+<a href="" ng-click="cartCtrl.delete(pizza.id, pizza.cost)">Remove</a><br>
+</p>
+<center><a class="navbar-brand" href="#/">Add More</a></center>

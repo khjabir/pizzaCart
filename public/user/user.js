@@ -7,6 +7,16 @@ function config ($routeProvider) {
 		controller : 'pizzaListCtrl',
 		controllerAs : 'pizzaCtrl'
 	})
+	.when('/order', {
+        templateUrl: 'user/viewCart/viewCart.html',
+        controller: 'viewCartCtrl',
+        controllerAs : 'cartCtrl'
+    })
+	.when('/pizza/:pizzadetails', {
+        templateUrl: 'user/pizzaDetails/pizzaDetails.html',
+        controller: 'pizzaDetailCtrl',
+        controllerAs : 'detailCtrl'
+    })
 	.otherwise({
 		redirectTo : '/'
 	});
