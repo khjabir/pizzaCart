@@ -1,4 +1,4 @@
-function viewCartCtrl (cartService) {
+function viewCartCtrl (cartService, location) {
 	
 	var vm = this;
 
@@ -13,9 +13,18 @@ function viewCartCtrl (cartService) {
 		cartService.delete(id);
 		alert('Successfully Removed from your Cart');
 	}
+
+	vm.placeOrder = function() {
+		if(vm.pizzaList.length == 0) {
+			alert('Your Cart is empty');
+			location.path('/');
+		} else {
+			location.path('userdetails');
+		}
+	}
 }
 
-viewCartCtrl.$inject = ['cartService'];
+viewCartCtrl.$inject = ['cartService', '$location'];
 
 angular
 	.module('user')

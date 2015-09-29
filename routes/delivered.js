@@ -14,7 +14,7 @@ router.all('/', function(req, res, next) {
       console.log('Connection established to', url);
       var collection = db.collection('orderDetails');
 
-      collection.find({"deliveryStatus":"Deliverd"}).toArray(function (err, result) {
+      collection.find({"deliveryStatus":"Delivered"}).toArray(function (err, result) {
         if (err) {
           console.log(err);
         } else if (result.length) {

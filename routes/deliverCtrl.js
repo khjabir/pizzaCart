@@ -17,7 +17,7 @@ router.all('/', function(req, res, next) {
       var collection = db.collection('orderDetails');
       var obj_id = new mongodb.ObjectId(idVal);
 
-      collection.update({"_id":obj_id},{$set:{'deliveryStatus':'Deliverd'}}, function (err, numUpdated) {
+      collection.update({"_id":obj_id},{$set:{'deliveryStatus':'Delivered'}}, function (err, numUpdated) {
 
         if (err) {
           console.log(err);

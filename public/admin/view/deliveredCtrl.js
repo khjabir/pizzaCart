@@ -4,10 +4,13 @@ function deliveredCtrl (location, http, sessionService, httpService) {
 	vm.orders = {};
 	
 	if(sessionService.loginStatus()) {
-		// alert('Login OK');
 
 	httpService.retrieve('/delivered').then(function(data) {
-		vm.orders = data;
+		if(data == "Nothing Found") {
+			alert('Nothing to display');
+		} else { 
+			vm.orders = data;
+		}
 	});
 
 	} else {

@@ -3,6 +3,25 @@ function sessionCtrl (location, http, sessionService, httpService) {
 	var vm = this;
 	vm.orders = {};
 
+	vm.showData = function() {
+
+		if(sessionService.loginStatus()) {
+			httpService.retrieve('/adminCtrl').then(function(data) {
+				if(data == "Nothing Found") {
+					vm.orders = {};
+					alert('Nothing to display');
+				} else { 
+					vm.orders = data;
+				}
+			});
+		} else {
+			alert('Login Failed\n');
+			location.path('admin');
+		}
+	};
+
+	vm.showData();
+
 	vm.deliver = function(id) {
 
 		vm.obj = {};
@@ -16,25 +35,11 @@ function sessionCtrl (location, http, sessionService, httpService) {
         .success(function(data) {
         	if(data=='success') {
         		alert('Delivered');
-        		httpService.retrieve().then(function(data) {
-					vm.orders = data;
-				});
+        		vm.showData();
         	} else {
         		alert('Not Delivered');
         	}
         });
-	}
-	
-	if(sessionService.loginStatus()) {
-		// alert('Login Successful');
-
-	httpService.retrieve('/adminCtrl').then(function(data) {
-		vm.orders = data;
-	});
-
-	} else {
-		alert('Login Failed\n');
-		location.path('admin');
 	}
 }
 
