@@ -1,19 +1,23 @@
 function AdminCtrl(location,sessionService) {
-	this.user = {};
-	this.validate = function() {
-		// console.log(this.user);
 
-		this.msg = "";
+	var vm = this;
+	vm.username = "admin";
+	vm.password = 'admin';	
+
+	vm.user = {};
+	vm.validate = function() {
+
+		vm.msg = "";
 		
-		if(this.user.name == 'admin') {
-			if(this.user.password == 'admin') {
+		if(vm.user.name == vm.username) {
+			if(vm.user.password == vm.password) {
 				sessionService.setSession();
 				location.path('viewOrders');
 			}
 		}
 
-		this.user = {};
-		this.msg = "Login Failed";
+		vm.user = {};
+		vm.msg = "Login Failed";
 	}
 }
 

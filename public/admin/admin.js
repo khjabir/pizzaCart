@@ -4,7 +4,8 @@ function config ($routeProvider) {
 	$routeProvider
 	.when('/admin',{
 		templateUrl : 'admin/login/login.html',
-		controller : 'AdminCtrl'
+		controller : 'AdminCtrl',
+		controllerAs: 'adminCtrl'
 	})
 	.when('/viewOrders',{
 		templateUrl : 'admin/view/viewOrders.html',

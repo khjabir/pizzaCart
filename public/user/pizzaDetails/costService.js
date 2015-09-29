@@ -1,7 +1,7 @@
 function costService() {
 	var vm = this;
-	vm.costVal = function(a, b) {
-		return a * b;
+	vm.costVal = function(quantity, price) {
+		return quantity * price;
 	};
 }
 

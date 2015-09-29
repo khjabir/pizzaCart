@@ -1,14 +1,13 @@
-<body ng-app = "adminApp">
-<div class="container"  ng-controller = "AdminCtrl as admin">
+<div class="container">
 <h1> Admin Login </h1>
   <form role="form">
     <div class="form-group" ng-form>
-      <input type="text" class="form-control" ng-model = "admin.user.name" placeholder="Username">
+      <input type="text" class="form-control" ng-model = "adminCtrl.user.name" placeholder="Username">
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" ng-model = "admin.user.password" placeholder="Password">
+      <input type="password" class="form-control" ng-model = "adminCtrl.user.password" placeholder="Password">
     </div>
-      <div ng-bind="admin.msg" style="color:red"></div>
-    <a ng-click="admin.validate()" class="btn btn-default">Login</a>
+      <div ng-bind="adminCtrl.msg" style="color:red"></div>
+    <a ng-click="adminCtrl.validate()" class="btn btn-default">Login</a>
   </form>
 </div>

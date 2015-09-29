@@ -1,4 +1,4 @@
-function sessionCtrl (location, http, sessionService, httpService) {
+function sessionCtrl (location, http, sessionService, httpService, httpPostService) {
 
 	var vm = this;
 	vm.orders = {};
@@ -26,12 +26,7 @@ function sessionCtrl (location, http, sessionService, httpService) {
 
 		vm.obj = {};
 		vm.obj.name = id;
-		http({
-        	method  : 'POST',
-          	url     : '/deliverCtrl',
-          	data    : vm.obj,
-          	headers : {'Content-Type': 'application/json'} 
-         })
+		httpPostService.postData('/deliverCtrl', vm.obj)
         .success(function(data) {
         	if(data=='success') {
         		alert('Delivered');
@@ -43,7 +38,7 @@ function sessionCtrl (location, http, sessionService, httpService) {
 	}
 }
 
-sessionCtrl.$inject = ['$location', '$http', 'sessionService', 'httpService'];
+sessionCtrl.$inject = ['$location', '$http', 'sessionService', 'httpService', 'httpPostService'];
 
 angular
 	.module('admin')

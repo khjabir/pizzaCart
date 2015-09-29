@@ -1,14 +1,13 @@
-function pizzaListCtrl(http) {
+function pizzaListCtrl(httpService) {
 
 	var vm = this;
-	vm.msg = "User page control works";
 
-	http.get('/pizzadata').success(function(data) {
+	httpService.retrieve('/pizzadata').then(function(data) {
       vm.list = data;
     });
 }
 
-pizzaListCtrl.$inject = ['$http'];
+pizzaListCtrl.$inject = ['httpService'];
 
 angular.module('user')
 	.controller('pizzaListCtrl',pizzaListCtrl);
