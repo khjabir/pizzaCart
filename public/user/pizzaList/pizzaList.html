@@ -14,11 +14,16 @@
   </nav>
 </div>
 
-<div class="container">
-  <div class="jumbotron">
-    <h2>Pizza Cart</h2>
+
+<div>
+  <h3>Pizza Cart</h3>
+  <div style="height: 265px">
+    <carousel interval="pizzaCtrl.myInterval" no-wrap="pizzaCtrl.noWrapSlides">
+      <slide ng-repeat="slide in pizzaCtrl.slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;" width="275">
+      </slide>
+    </carousel>
   </div>
-  <input type="text" class="form-control" ng-model = "query" placeholder="Search">
 </div>
 
 <div class="img" ng-repeat="pizza in pizzaCtrl.list | filter:query | orderBy:'name'">

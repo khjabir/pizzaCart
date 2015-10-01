@@ -1,4 +1,4 @@
-angular.module('user',['ngRoute']);
+angular.module('user',['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 
 function config ($routeProvider) {
 	$routeProvider
